@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
+@import "/css/reset.css";
+
+:root {
+
+
+/* ### Primary */
+
+--Strong-Cyan: hsl(171, 66%, 44%);
+--Light-Blue: hsl(233, 100%, 69%);
+
+/* ### Neutral */
+
+--Dark-Grayish-Blue: hsl(210, 10%, 33%);
+--Grayish-Blue: hsl(201, 11%, 66%);
+
+/* ### Body Copy */
+
+--font-Bai-Jamjuree: 'Bai Jamjuree', sans-serif;
+
+}
+
+/* primary tags */
+
+body {
+    font-family: var(--font-Bai-Jamjuree);
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+main {
+    background: url(/images/bg-header-mobile.png) no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 6rem;
+    padding: 7rem 2rem;
+}
+
+a{
+    color: var(--Dark-Grayish-Blue);
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: var(--Dark-Grayish-Blue);
+    line-height: 1.2;
+    padding-bottom: 1.5rem;
+}
+
+h1{
+    font-size: 1.6em;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-size: 16px;
+    padding-bottom: 3rem;
+}
+
+/* header section */
+
+header{
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 4rem;
+    max-width: 740px;
+}
+
+.logo{
+    align-self: center;
+    padding: 0 0 3rem;
+}
+
+.buttton-container{
+    align-self: center;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.iosbutton, .macbutton{
+    color: #fff;
+    border-radius: 100vh;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-weight: bold;
+    max-width: 350px;
+}
+
+.iosbutton{
+    background-color: var(--Strong-Cyan);
+    box-shadow: 0 1px 0 1px hsl(171 66% 34%);
+}
+
+.macbutton{
+    background: var(--Light-Blue);
+    box-shadow: 0 1px 0 1px hsl(233, 100%, 62%);
+}
+
+/* apps section */
+
+.Apps {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+   
+}
+
+.apps-grid{
+    display: flex;
+    justify-content: center;
+}
+
+.apps-grid{
+    display: grid;
+    gap: 3rem;
+}
+
+/* clipboard section */
+
+/* tools section */
+
+.tools-container{
+    padding-top: 2rem;
+}
+
+.tools img{
+    padding-bottom: 2rem;
+}
+
+/* brands section */
+
+.brands{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 4.5rem;
+    scale: 0.85;
+}
+
+/* download section */
+
+.download{
+    padding-bottom: 4rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--Dark-Grayish-Blue);
+    background: hsl(201, 11%, 96%);
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.footer-logo{
+    scale: 0.5;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 3rem;
+}
+
+/* active stats */
+
+a:hover{
+    color: var(--Strong-Cyan);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.footer-icon:hover{
+    cursor: pointer;
+    color: var(--Strong-Cyan);
+}
+
+/* screen size larger than 1077px */
+
+@media (min-width: 1077px){
+
+main{
+    background: url(/images/bg-header-desktop.png) no-repeat top center;
+    background-size: contain;
+    width: 100%;
+}
+
+h1{
+    font-size: 2.8em;
+}
+
+h2{
+    font-size: 2.2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* header */
+
+header p{
+    font-size: 20.5px;
+}
+
+.buttton-container{
+    flex-flow: row;
+}
+
+.brands{
+    width: 100%;
+    flex-flow: row;
+    gap: 0;
+    justify-content: space-between;
+}
+
+/* apps section */
+
+.apps-p{
+    max-width: 720px;
+}
+
+.apps-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.apps-img1{
+    transform: translateX(-60px);
+    scale: 1.2;
+    max-width: 700px;
+}
+
+.apps-container{
+text-align: left;
+padding: 5rem 0 5rem 5rem;
+max-width: 440px;
+}
+
+
+}
