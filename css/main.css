@@ -1,0 +1,457 @@
+@import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
+@import "reset.css";
+
+:root {
+
+
+    /* ### Primary */
+
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+
+    /* ### Body Copy */
+
+    --font-Bai-Jamjuree: 'Bai Jamjuree', sans-serif;
+
+}
+
+/* primary tags */
+
+body {
+    text-align: center;
+    font-family: var(--font-Bai-Jamjuree);
+    background: url(../images/bg-header-mobile.png) top center no-repeat;
+    background-size: contain;
+}
+
+main {
+    padding: 7.7rem 2rem;
+    display: flex;
+    flex-flow: column;
+    gap: 5rem;
+}
+
+a {
+    color: var(--Dark-Grayish-Blue);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--Dark-Grayish-Blue);
+    line-height: 1.2;
+    padding-bottom: 1.2rem;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.5em;
+    padding-bottom: 0.8rem;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-size: 16px;
+    padding: 0 0.1rem 3rem;
+}
+
+/* header section */
+
+header {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 4rem;
+}
+
+.logo {
+    align-self: center;
+    padding: 0 0 4rem;
+}
+
+.buttton-container {
+    align-self: center;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.iosbutton,
+.macbutton {
+    color: #fff;
+    border-radius: 100vh;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    min-width: 310px;
+}
+
+@media (max-width: 374px) {
+
+    .iosbutton,
+    .macbutton {
+        min-width: fit-content;
+    }
+}
+
+.iosbutton {
+    background-color: var(--Strong-Cyan);
+    box-shadow: 0 1px 0 1px hsl(171 66% 34%),
+        0 10px 10px 1px hsl(171 66% 84%);
+}
+
+.macbutton {
+    background: var(--Light-Blue);
+    box-shadow: 0 1px 0 1px hsl(233, 100%, 62%),
+        0 10px 10px 1px hsl(233, 100%, 84%);
+}
+
+/* apps section */
+
+.Apps {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.apps-grid {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.apps-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+/* clipboard section */
+
+.clipboard {
+    margin-top: 4.2rem;
+}
+
+.clipboard-img {
+    margin-top: 0.8rem;
+    scale: 1.1;
+}
+
+/* tools section */
+
+.tools {
+    margin-top: 1rem;
+}
+
+.tools-container {
+    padding-top: 2.5rem;
+}
+
+.tools img {
+    padding-bottom: 2rem;
+}
+
+.tool3 p {
+    padding-bottom: 1rem;
+}
+
+/* brands section */
+
+.brands {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 4.5rem;
+    scale: 0.85;
+}
+
+/* download section */
+
+.download {
+    padding: 3.3rem 0 3.3rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--Dark-Grayish-Blue);
+    background: hsl(201, 11%, 96%);
+    padding: 2rem 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    scale: 0.5;
+}
+
+.footer-socials {
+    margin-top: 1rem;
+    display: flex;
+    gap: 3rem;
+}
+
+/* active stats */
+
+a:hover {
+    color: var(--Strong-Cyan);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.footer-icon:hover {
+    cursor: pointer;
+    color: var(--Strong-Cyan);
+}
+
+/* media query */
+
+@media (min-width: 870px) {
+    body {
+        background: url(../images/bg-header-desktop.png) top center no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    /* header */
+
+    header {
+        max-width: 720px;
+        align-self: center;
+    }
+
+    header p {
+        font-size: 1.25em;
+    }
+
+    .buttton-container {
+        flex-flow: row;
+        gap: 1.5rem;
+    }
+
+    .iosbutton,
+    .macbutton {
+        padding: 0.8rem 2.8rem;
+        min-width: 0;
+    }
+
+    /* apps section */
+
+    .apps-top {
+        max-width: 720px;
+        align-self: center;
+    }
+
+    .Apps p {
+        font-size: 1.15em;
+    }
+
+    .apps-grid {
+        grid-template-columns: auto auto;
+        gap: 0;
+        align-items: center;
+
+    }
+
+    .apps-img1 {
+        transform: translateX(-200px);
+    }
+
+    .apps-container {
+        text-align: left;
+        max-width: 350px;
+        transform: translateX(-100px);
+    }
+
+    .apps-container p {
+        font-size: 1em;
+    }
+
+    /* clipboard section */
+
+    .clipboard {
+        max-width: 720px;
+        align-self: center;
+    }
+
+    .clipboard-img {
+        scale: 1.255;
+        margin-top: 7.3rem;
+    }
+
+    .clipboard p {
+        font-size: 1.14em;
+    }
+
+    /* tools */
+
+    .tools {
+        max-width: 1100px;
+        align-self: center;
+    }
+
+    .tools p {
+        font-size: 1.15em;
+    }
+
+    .tools-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+    }
+
+    .tools-container p {
+        font-size: 1em;
+    }
+
+    /* brands */
+
+    .brands {
+        flex-flow: row;
+        justify-content: space-around;
+        max-width: 2000px;
+        gap: 0;
+        scale: 1;
+    }
+
+    /* download */
+
+    .download {
+        align-self: center;
+        max-width: 720px;
+    }
+
+    .download p {
+        font-size: 1.14em;
+    }
+
+    /* footer */
+
+    footer {
+        display: grid;
+        grid-template-columns: 25% 13% 13% 13% 36%;
+        grid-template-rows: repeat(2 67.5px);
+        column-gap: 0;
+        row-gap: 15px;
+        font-weight: 400;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .footer-logo {
+        align-self: center;
+        justify-self: center;
+        grid-column: 1 / 2;
+        grid-row: span 2;
+        scale: 0.45;
+    }
+
+    .faq,
+    .privacy,
+    .contact,
+    .instal,
+    .press {
+        justify-self: flex-start;
+    }
+
+    .faq,
+    .privacy,
+    .instal {
+        align-self: flex-end;
+    }
+
+    .contact,
+    .press {
+        align-self: flex-start;
+    }
+
+    .faq {
+        grid-column: 2 / 3;
+    }
+
+    .privacy {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .contact {
+        grid-column: 2 / 3;
+    }
+
+    .press {
+        grid-column: 3 / 4;
+    }
+
+    .instal {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    }
+
+    .footer-socials {
+        grid-column: 5 / 6;
+        grid-row: 1 / span 2;
+        margin-top: 0;
+        gap: 1.5rem;
+        justify-self: center;
+        transform: translateX(25%);
+    }
+
+    @media (max-width: 1000px) {
+        footer {
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            grid-template-rows: repeat(5 auto);
+            padding: 2rem 0;
+        }
+
+        .footer-logo {
+            grid-column: 1 / 2;
+            grid-row: 1 / span 5;
+        }
+
+        .faq,
+        .privacy,
+        .contact,
+        .instal,
+        .press {
+            grid-column: 2 / 3;
+            align-self: center;
+            justify-self: center;
+            grid-row: auto;
+        }
+
+        .footer-socials {
+            grid-column: 3 / 4;
+            grid-row: 1 / span 5;
+        }
+    }
